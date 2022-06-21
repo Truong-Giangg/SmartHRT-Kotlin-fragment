@@ -66,7 +66,7 @@ class SignInFragment : Fragment() {
         }else{
             println("giang-opencv failed!")
         }
-        val setdata = FireBase()
+//        val setdata = FireBase()
 //        setdata.setFData("message1","blablabla")
 //        println("giangne"+setdata.getFData("message"))
     }

@@ -46,6 +46,10 @@
             android:name=".gestureList"/>
         <activity
             android:name=".chooseBtn"/>
+        <activity
+            android:name=".addWidget"/>
+        <activity
+            android:name=".removeWidget"/>
     </application>
 
 </manifest>

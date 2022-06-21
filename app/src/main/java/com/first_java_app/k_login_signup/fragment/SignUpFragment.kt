@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.first_java_app.k_login_signup.DataStore
-import com.first_java_app.k_login_signup.FireBase
+//import com.first_java_app.k_login_signup.FireBase
 import com.first_java_app.k_login_signup.R
 import com.first_java_app.k_login_signup.UserHelperClass
 import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
@@ -64,9 +64,9 @@ class SignUpFragment : Fragment() {
                     binding.inputEmail.text.toString().trim(),
                     binding.inputPass.text.toString().trim())
                 Log.e("SignUpFragment:", " mk = ${binding.inputPass.text.toString().trim()}");
-                var helperClass = UserHelperClass(binding.inputFullName.text.toString().trim(), "giang123vn1", binding.inputEmail.text.toString().trim(),"01234555",binding.inputPass.text.toString().trim())
-                var fData = FireBase()
-                fData.database.reference.child("giang123vn1").setValue(helperClass)
+//                var helperClass = UserHelperClass(binding.inputFullName.text.toString().trim(), "giang123vn1", binding.inputEmail.text.toString().trim(),"01234555",binding.inputPass.text.toString().trim())
+//                var fData = FireBase()
+//                fData.database.reference.child("giang123vn1").setValue(helperClass)
                 findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
 //                findNavController().popBackStack()
             }

@@ -341,15 +341,15 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
         reference!!.child(firebaseChild!!).setValue(userGet[count])
     }
 
-//    fun gotoaddWidget(view: View?) {
-//        val intent = Intent(this@MainMenu, addWidget::class.java)
-//        startActivity(intent)
-//    }
-//
-//    fun gotoremoveWidget(view: View?) {
-//        val intent = Intent(this@MainMenu, removeWidget::class.java)
-//        startActivity(intent)
-//    }
+    fun gotoaddWidget(view: View?) {
+        val intent = Intent(this@MainMenu, addWidget::class.java)
+        startActivity(intent)
+    }
+
+    fun gotoremoveWidget(view: View?) {
+        val intent = Intent(this@MainMenu, removeWidget::class.java)
+        startActivity(intent)
+    }
 
     companion object {
         lateinit var addedWidgetSW: Array<Switch?>
