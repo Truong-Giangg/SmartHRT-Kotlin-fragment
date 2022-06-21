@@ -51,7 +51,7 @@ class SignInFragment : Fragment() {
 //                    inputEmail.text.toString().trim(),
 //                    inputPass.text.toString().trim()
 //                )
-                val intent = Intent(activity, CameraActivity::class.java)
+                val intent = Intent(activity, MainMenu::class.java)
                 startActivity(intent)
             }
             listenerSuccessEvent()

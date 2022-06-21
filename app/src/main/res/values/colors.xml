@@ -10,5 +10,8 @@
     <color name="orange">#FE724C</color>
     <color name="grayWhite">#f2f2f2</color>
     <color name="yellow">#FFF53B</color>
+    <color name="btn_bg_1">#fece2f</color>
+    <color name="purple_red">#CC3366</color>
+
 
 </resources>
