@@ -40,6 +40,12 @@
             android:name=".CameraActivity"/>
         <activity
             android:name=".MainMenu"/>
+        <activity
+            android:name=".pickedGesture"/>
+        <activity
+            android:name=".gestureList"/>
+        <activity
+            android:name=".chooseBtn"/>
     </application>
 
 </manifest>

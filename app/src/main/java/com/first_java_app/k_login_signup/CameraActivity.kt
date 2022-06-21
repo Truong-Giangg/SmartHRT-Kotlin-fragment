@@ -228,20 +228,20 @@ class CameraActivity : Activity(), CvCameraViewListener2 {
         }
     }
 
-//    fun backHome(view: View?) {
-//        val intent = Intent(this@CameraActivity, MainMenu::class.java)
-//        startActivity(intent)
-//    }
-//
-//    fun goAddGesture(view: View?) {
-//        val intent = Intent(this@CameraActivity, addGesture::class.java)
-//        startActivity(intent)
-//    }
+    fun backHome(view: View?) {
+        val intent = Intent(this@CameraActivity, MainMenu::class.java)
+        startActivity(intent)
+    }
 
-//    fun goSwitchGesture(view: View?) {
-//        val intent = Intent(this@CameraActivity, switchGesture::class.java)
-//        startActivity(intent)
-//    }
+    fun goAddGesture(view: View?) {
+        val intent = Intent(this@CameraActivity, chooseBtn::class.java)
+        startActivity(intent)
+    }
+
+    fun goSwitchGesture(view: View?) {
+        val intent = Intent(this@CameraActivity, pickedGesture::class.java)
+        startActivity(intent)
+    }
 
     companion object {
         private const val TAG = "MainActivity"
