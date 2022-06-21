@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayWhite">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_smallorangecir"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_lightsemi" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_orangecir" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Verification Code"
+            android:textSize="40dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Please type the verification code sent to prelookstudio@gmail.com"
+            android:textSize="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:id="@+id/v1"
+                android:textSize="15pt"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:background="@drawable/rectangle_slim"
+                android:layout_width="40dp"
+                android:layout_height="60dp"/>
+            <EditText
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:id="@+id/v2"
+                android:textSize="15pt"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:background="@drawable/rectangle_slim"
+                android:layout_width="40dp"
+                android:layout_height="60dp"/>
+            <EditText
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:id="@+id/v3"
+                android:textSize="15pt"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:background="@drawable/rectangle_slim"
+                android:layout_width="40dp"
+                android:layout_height="60dp"/>
+            <EditText
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:id="@+id/v4"
+                android:textSize="15pt"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:background="@drawable/rectangle_slim"
+                android:layout_width="40dp"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I don't receive a code!" />
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Please resend"
+                android:textColor="@color/orange" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
