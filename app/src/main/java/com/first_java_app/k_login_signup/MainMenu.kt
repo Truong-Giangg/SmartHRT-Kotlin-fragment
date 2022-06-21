@@ -5,20 +5,21 @@ import android.widget.SeekBar.OnSeekBarChangeListener
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
 import android.os.Bundle
-import com.first_java_app.k_login_signup.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.Intent
 import android.speech.RecognizerIntent
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
-import com.first_java_app.k_login_signup.MainMenu
 import com.google.firebase.database.DatabaseError
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.first_java_app.k_login_signup.Alarm.pickAlarm
+import com.first_java_app.k_login_signup.handdetect.CameraActivity
+import com.first_java_app.k_login_signup.ipCam.ipCamere
 import java.lang.Exception
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 
 class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListener,
     CompoundButton.OnCheckedChangeListener {
@@ -37,7 +38,7 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
         val navigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-//                R.id.action_alarm -> startActivity(Intent(this@MainMenu, pickAlarm::class.java))
+                R.id.action_alarm -> startActivity(Intent(this@MainMenu, pickAlarm::class.java))
                 R.id.action_voice -> {
                     //startActivity(new Intent(MainMenu.this,Voice.class));
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -53,7 +54,7 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
                         CameraActivity::class.java
                     ).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 )
-//                R.id.action_ipcam -> startActivity(Intent(this@MainMenu, ipCamere::class.java))
+                R.id.action_ipcam -> startActivity(Intent(this@MainMenu, ipCamere::class.java))
 //                R.id.action_logout -> {
 //                    startActivity(Intent(this@MainMenu, Login::class.java))
 //                    finish()

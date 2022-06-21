@@ -1,18 +1,14 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.handdetect
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
 import android.os.Bundle
-import com.first_java_app.k_login_signup.R
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
-import com.first_java_app.k_login_signup.pickedGesture
 import android.widget.ScrollView
 import android.widget.LinearLayout
 import android.view.ViewGroup
-import com.first_java_app.k_login_signup.UserHelperClassGadget
 import android.widget.TextView
 import android.view.Gravity
 import android.graphics.Bitmap
@@ -20,7 +16,10 @@ import com.google.firebase.database.DatabaseError
 import android.graphics.BitmapFactory
 import android.content.res.AssetManager
 import android.widget.ImageView
+import com.first_java_app.k_login_signup.MainActivity
+import com.first_java_app.k_login_signup.R
 import java.io.IOException
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 
 class pickedGesture : AppCompatActivity() {
     var rootNode: FirebaseDatabase? = null

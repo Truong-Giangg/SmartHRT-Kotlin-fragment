@@ -22,7 +22,7 @@ class WelcomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentWelcomeBinding.inflate(inflater,container,false)
         if(onLoginSuccess()){
-            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
+//            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
         }
         return binding.root
     }

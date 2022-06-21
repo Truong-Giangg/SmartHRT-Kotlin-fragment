@@ -1,14 +1,12 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.handdetect
 
 import android.Manifest
 import android.app.Activity
 import org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2
 import org.opencv.core.Mat
 import org.opencv.android.CameraBridgeViewBase
-import com.first_java_app.k_login_signup.objectDetectorClass
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
-import com.first_java_app.k_login_signup.UserHelperClassGadget
 import android.widget.TextView
 import org.opencv.android.BaseLoaderCallback
 import org.opencv.android.LoaderCallbackInterface
@@ -17,10 +15,8 @@ import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
-import com.first_java_app.k_login_signup.R
 import android.content.pm.ActivityInfo
 import android.view.SurfaceView
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -33,8 +29,9 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.view.Window
-//import com.first_java_app.k_login_signup.MainMenu
-//import com.first_java_app.k_login_signup.addGesture
+import com.first_java_app.k_login_signup.*
+import com.first_java_app.k_login_signup.adapter.objectDetectorClass
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 import java.io.IOException
 
 class CameraActivity : Activity(), CvCameraViewListener2 {

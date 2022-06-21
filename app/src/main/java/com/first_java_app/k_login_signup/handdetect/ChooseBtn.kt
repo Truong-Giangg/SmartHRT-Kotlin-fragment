@@ -1,21 +1,20 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.handdetect
 
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
 import android.os.Bundle
-import com.first_java_app.k_login_signup.R
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
-import com.first_java_app.k_login_signup.chooseBtn
-import com.first_java_app.k_login_signup.UserHelperClassGadget
 import android.widget.TextView
 import android.widget.LinearLayout
 import com.google.firebase.database.DatabaseError
 import android.content.Intent
 import android.view.View
+import com.first_java_app.k_login_signup.MainActivity
+import com.first_java_app.k_login_signup.R
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 
 class chooseBtn : AppCompatActivity(), View.OnClickListener {
     var rootNode: FirebaseDatabase? = null

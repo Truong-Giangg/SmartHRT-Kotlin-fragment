@@ -1,4 +1,4 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.model
 
 class UserHelperClass {
     var name: String? = null

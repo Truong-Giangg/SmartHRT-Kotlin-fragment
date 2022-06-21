@@ -1,4 +1,4 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.adapter
 
 import android.content.res.AssetFileDescriptor
 import android.content.res.AssetManager

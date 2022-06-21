@@ -59,10 +59,13 @@
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable-v24/border_background.xml" value="0.2505" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable-v24/btn_bg.xml" value="0.2505" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_addwidget.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_alarm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_chooseBtn.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_gesturelist.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_ip_camere.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main_gesture.xml" value="0.1" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_pickalarm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_removewidget.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_show_gesture_picked.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_menu.xml" value="0.22826086956521738" />

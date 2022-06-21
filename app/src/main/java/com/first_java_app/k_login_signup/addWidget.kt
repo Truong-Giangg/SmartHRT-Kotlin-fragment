@@ -1,24 +1,20 @@
 package com.first_java_app.k_login_signup
 
 import androidx.appcompat.app.AppCompatActivity
-import com.first_java_app.k_login_signup.R
 import android.widget.EditText
-import com.first_java_app.k_login_signup.UserHelperClassGadget
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
 import android.os.Bundle
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import android.widget.Toast
-import com.google.android.gms.tasks.OnSuccessListener
 import android.content.Intent
 import android.graphics.Color
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
-import com.first_java_app.k_login_signup.MainMenu
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 
 class addWidget : AppCompatActivity(), View.OnClickListener {
     lateinit var addWidgetSwitch: Button

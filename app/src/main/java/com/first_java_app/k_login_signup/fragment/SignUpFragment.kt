@@ -12,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 import com.first_java_app.k_login_signup.DataStore
 //import com.first_java_app.k_login_signup.FireBase
 import com.first_java_app.k_login_signup.R
-import com.first_java_app.k_login_signup.UserHelperClass
 import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
 import com.first_java_app.k_login_signup.databinding.FragmentSignUpBinding
 

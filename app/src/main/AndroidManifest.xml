@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.first_java_app.k_login_signup">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -37,19 +39,29 @@
 <!--                android:value=".activity.LoginActivity" />-->
         </activity>
         <activity
-            android:name=".CameraActivity"/>
+            android:name=".handdetect.CameraActivity"/>
         <activity
             android:name=".MainMenu"/>
         <activity
-            android:name=".pickedGesture"/>
+            android:name=".handdetect.pickedGesture"/>
         <activity
-            android:name=".gestureList"/>
+            android:name=".handdetect.gestureList"/>
         <activity
-            android:name=".chooseBtn"/>
+            android:name=".handdetect.chooseBtn"/>
         <activity
             android:name=".addWidget"/>
         <activity
             android:name=".removeWidget"/>
+        <activity
+            android:name=".Alarm.pickAlarm"/>
+        <activity
+            android:name=".Alarm.alarmMainActivity"/>
+        <activity
+            android:name=".ipCam.ipCamere"/>
+        <receiver android:name=".Alarm.AlarmReceiver"/>
+        <service android:name=".Alarm.Music"
+            android:enabled="true"/>
+
     </application>
 
 </manifest>

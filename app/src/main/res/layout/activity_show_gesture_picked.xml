@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/btn_bg_1"
-    tools:context=".pickedGesture">
+    tools:context=".handdetect.pickedGesture">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

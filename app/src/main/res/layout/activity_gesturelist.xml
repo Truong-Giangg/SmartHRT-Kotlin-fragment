@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/btn_bg_1"
-    tools:context=".gestureList">
+    tools:context=".handdetect.gestureList">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

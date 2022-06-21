@@ -42,11 +42,6 @@
         <action
             android:id="@+id/action_welcomeFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_homeFragment"
-            app:destination="@id/menuFragment"
-            app:popUpTo="@id/welcomeFragment"
-            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -59,11 +54,6 @@
             app:destination="@id/signUpFragment"
             app:popUpTo="@id/signInFragment"
             app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_signInFragment_to_homeFragment"
-            app:destination="@id/menuFragment"
-            app:popUpTo="@id/signInFragment"
-            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -74,27 +64,6 @@
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment"
             app:popUpTo="@id/signUpFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/menuFragment"
-        tools:layout="@layout/fragment_menu"
-        android:name="com.first_java_app.k_login_signup.fragment.Menu"
-        android:label="Menu">
-        <action
-            android:id="@+id/action_menuFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.first_java_app.k_login_signup.fragment.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"
-        >
-        <action
-            android:id="@+id/action_profileFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment"
-            app:popUpTo="@id/menuFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

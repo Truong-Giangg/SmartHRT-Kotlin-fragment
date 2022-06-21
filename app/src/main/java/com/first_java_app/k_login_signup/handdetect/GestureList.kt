@@ -1,19 +1,15 @@
-package com.first_java_app.k_login_signup
+package com.first_java_app.k_login_signup.handdetect
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
-import com.first_java_app.k_login_signup.UserHelperClassGadget
 import android.os.Bundle
-import com.first_java_app.k_login_signup.R
 import android.widget.ScrollView
 import android.widget.LinearLayout
 import android.view.ViewGroup
 import android.graphics.Bitmap
 import android.view.Gravity
-import com.first_java_app.k_login_signup.gestureList
 import android.content.Intent
-import com.first_java_app.k_login_signup.MainActivity
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -22,8 +18,10 @@ import android.graphics.BitmapFactory
 import android.content.res.AssetManager
 import android.view.View
 import android.widget.ImageView
+import com.first_java_app.k_login_signup.MainActivity
+import com.first_java_app.k_login_signup.R
 import java.io.IOException
-
+import com.first_java_app.k_login_signup.model.UserHelperClassGadget
 //https://tutorialwing.com/create-android-scrollview-programmatically-android/
 class gestureList : AppCompatActivity(), View.OnClickListener {
     var onStatus = ""
