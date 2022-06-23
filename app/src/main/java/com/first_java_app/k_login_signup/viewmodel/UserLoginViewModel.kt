@@ -24,7 +24,7 @@ class UserLoginViewModel : ViewModel() {
     val isErrorEvent: LiveData<String>
         get() = _isErrorEvent
 
-    fun checkEmailAndPassword(email: String, password: String) {
+    fun checkEmailAndPassword(email: String, password: String, username: String) {
         //kiem tra format email
         val isValidEmail = isEmailValid(email)
         if (!isValidEmail) {
@@ -34,12 +34,20 @@ class UserLoginViewModel : ViewModel() {
         //password length > 8 && < 10
         val isValidPassword = isPasswordValid(password)
         if (!isValidPassword) {
-            _isErrorEvent.postValue("Password must have at least 8 character (including uppercase, lowercase, special character)")
+            _isErrorEvent.postValue("Mật khẩu phải có ít nhấ 8 ký tự (bao gồm viết hoa, viết thường, ký tự đặc biệt)")
+            return
+        }
+        val isValidPUser = isUserValid(username)
+        if (isValidPUser) {
+            _isErrorEvent.postValue("Username không được bỏ trống")
             return
         }
         _isSuccessEvent.postValue(true)
     }
-
+    // kiem tra nguoi dung nhap format email
+    private fun isUserValid(username: String): Boolean {
+        return username.isEmpty()
+    }
     // kiem tra nguoi dung nhap format email
     private fun isEmailValid(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()

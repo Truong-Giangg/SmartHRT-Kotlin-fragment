@@ -5,140 +5,160 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenu">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/btn_bg_1"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:weightSum="3" >
+            android:weightSum="4">
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:foregroundGravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/logo_login"
+                />
             <TextView
                 android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:ems="10"
                 android:layout_weight="1"
+                android:ems="8"
                 android:gravity="center"
-                android:textSize="20dp"
-                android:drawableLeft="@drawable/usericon"
-                />
+                android:layout_marginTop="30dp"
+                android:textSize="20dp" />
+
             <Button
                 android:id="@+id/addWidgetBtn"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginRight="2dp"
-                android:onClick="gotoaddWidget"
                 android:layout_centerHorizontal="true"
-                android:textColor="@color/purple_red"
-                app:backgroundTint="@color/btn_bg_1"
-                android:textAllCaps="false"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:onClick="gotoaddWidget"
+                android:padding="0dp"
                 android:text="thêm"
+                android:layout_marginTop="30dp"
+                android:textAllCaps="false"
+                android:textColor="@color/purple_red"
                 android:textStyle="bold"
-                android:padding="0dp"/>
+                app:backgroundTint="@color/btn_bg_1" />
+
             <Button
                 android:id="@+id/rmWidgetBtn"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginRight="2dp"
-                android:onClick="gotoremoveWidget"
                 android:layout_centerHorizontal="true"
-                android:textColor="@color/purple_red"
-                app:backgroundTint="@color/btn_bg_1"
-                android:textAllCaps="false"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:onClick="gotoremoveWidget"
+                android:padding="0dp"
                 android:text="xóa"
+                android:textAllCaps="false"
+                android:textColor="@color/purple_red"
                 android:textStyle="bold"
-                android:padding="0dp" />
+                app:backgroundTint="@color/btn_bg_1" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/addWidget"
+                android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:layout_centerHorizontal="true">
+                android:layout_marginTop="3dp">
+
                 <LinearLayout
+                    android:id="@+id/layoutTemp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:background="@drawable/border_background"
-                    android:id="@+id/layoutTemp">
-<!--                    <TextView-->
-<!--                        android:id="@+id/textTemp"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_centerHorizontal="true"-->
-<!--                        android:gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:text="Temperature"-->
-<!--                        />-->
+                    android:orientation="vertical">
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textTemp"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_centerHorizontal="true"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:text="Temperature"-->
+                    <!--                        />-->
                 </LinearLayout>
             </ScrollView>
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/addWidget"
+                android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:layout_centerHorizontal="true">
+                android:layout_marginTop="3dp">
+
                 <LinearLayout
+                    android:id="@+id/layoutswitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:background="@drawable/border_background"
-                    android:id="@+id/layoutswitch">
-<!--                    <TextView-->
-<!--                        android:id="@+id/textswitch"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_centerHorizontal="true"-->
-<!--                        android:gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:text="Switches"-->
-<!--                        />-->
+                    android:orientation="vertical">
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textswitch"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_centerHorizontal="true"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:text="Switches"-->
+                    <!--                        />-->
                 </LinearLayout>
             </ScrollView>
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/addWidget"
+                android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:layout_centerHorizontal="true">
+                android:layout_marginTop="3dp">
+
                 <LinearLayout
+                    android:id="@+id/layoutseekbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:background="@drawable/border_background"
-                    android:id="@+id/layoutseekbar">
-<!--                    <TextView-->
-<!--                        android:id="@+id/textseekbar"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_centerHorizontal="true"-->
-<!--                        android:gravity="center"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:text="Sliders"-->
-<!--                        />-->
+                    android:orientation="vertical">
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textseekbar"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_centerHorizontal="true"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:text="Sliders"-->
+                    <!--                        />-->
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>

@@ -32,7 +32,7 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
     CompoundButton.OnCheckedChangeListener {
     private lateinit var sharePreferences : SharedPreferences
     private lateinit var viewModel: UserLoginViewModel
-    var userTop: TextView? = null
+    lateinit var userTop: TextView
     var layout: LinearLayout? = null
     lateinit var txViewName: Array<String?>
     private var currentWidget = 0
@@ -44,6 +44,7 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
         setContentView(R.layout.activity_main_menu)
         layout = findViewById(R.id.layout)
         userTop = findViewById(R.id.userName)
+        userTop.setText(MainActivity.user_username_gadget)
         val navigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

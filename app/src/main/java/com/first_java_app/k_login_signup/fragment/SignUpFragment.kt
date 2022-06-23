@@ -50,7 +50,8 @@ class SignUpFragment : Fragment() {
                 // code nhận thông tin đăng kí ở đây
                 viewModel.checkEmailAndPassword(
                     inputEmail.text.toString().trim(),
-                    inputPass.text.toString().trim()
+                    inputPass.text.toString().trim(),
+                            inputFullName.text.toString().trim()
                 )
             }
         }
