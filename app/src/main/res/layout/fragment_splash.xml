@@ -9,18 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:background="@color/orange">
+        android:background="@color/btn_bg_1">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
         <ImageView
+            android:id="@+id/welcomeId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/welcomeId"
-            android:src="@drawable/ic_welcomeic"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerInParent="true"
+            android:src="@drawable/background_smartrt" />
+
+
     </RelativeLayout>
 </layout>
