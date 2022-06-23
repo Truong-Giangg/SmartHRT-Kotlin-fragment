@@ -82,6 +82,7 @@ class SignInFragment : Fragment() {
                     if (passwordFromDB == userEnteredPassword) {
                         binding.inputUser.setError(null)
                         MainActivity.user_username_gadget = binding.inputUser.text.toString().trim()
+                        binding.inputPass.setText("")
                         val intent = Intent(activity, MainMenu::class.java)
                         startActivity(intent)
                     } else {

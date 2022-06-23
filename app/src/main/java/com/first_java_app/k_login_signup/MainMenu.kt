@@ -7,6 +7,7 @@ import com.google.firebase.database.DatabaseReference
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.Intent
+import android.content.SharedPreferences
 import android.speech.RecognizerIntent
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
@@ -15,14 +16,22 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+
+import androidx.navigation.fragment.findNavController
 import com.first_java_app.k_login_signup.Alarm.pickAlarm
+import com.first_java_app.k_login_signup.databinding.FragmentProfileBinding
+import com.first_java_app.k_login_signup.fragment.SignInFragment
 import com.first_java_app.k_login_signup.handdetect.CameraActivity
 import com.first_java_app.k_login_signup.ipCam.ipCamere
 import java.lang.Exception
 import com.first_java_app.k_login_signup.model.UserHelperClassGadget
+import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
+
 
 class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListener,
     CompoundButton.OnCheckedChangeListener {
+    private lateinit var sharePreferences : SharedPreferences
+    private lateinit var viewModel: UserLoginViewModel
     var userTop: TextView? = null
     var layout: LinearLayout? = null
     lateinit var txViewName: Array<String?>
@@ -55,10 +64,15 @@ class MainMenu : AppCompatActivity(), View.OnClickListener, OnSeekBarChangeListe
                     ).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 )
                 R.id.action_ipcam -> startActivity(Intent(this@MainMenu, ipCamere::class.java))
-//                R.id.action_logout -> {
-//                    startActivity(Intent(this@MainMenu, Login::class.java))
-//                    finish()
-//                }
+                R.id.action_logout -> {
+                    val editor : SharedPreferences.Editor = sharePreferences.edit()
+                    editor.putString("NAME",viewModel.user.fullName)
+                    editor.putString("EMAIL",viewModel.user.email)
+                    editor.putString("PASSWORD",viewModel.user.password.trim())
+                    editor.putBoolean("CHECK",false)
+                    editor.apply()
+                    startActivity(Intent(this@MainMenu, SignInFragment::class.java))
+                }
             }
             true
         }
