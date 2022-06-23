@@ -1,23 +1,28 @@
 package com.first_java_app.k_login_signup.fragment
 
+//import com.first_java_app.k_login_signup.FireBase
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.first_java_app.k_login_signup.DataStore
-//import com.first_java_app.k_login_signup.FireBase
 import com.first_java_app.k_login_signup.R
-import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
 import com.first_java_app.k_login_signup.databinding.FragmentSignUpBinding
+import com.first_java_app.k_login_signup.model.UserHelperClass
+import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUpFragment : Fragment() {
     private lateinit var binding : FragmentSignUpBinding
     private lateinit var viewModel: UserLoginViewModel
+    var rootNode: FirebaseDatabase? = null
+    var reference: DatabaseReference? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UserLoginViewModel::class.java)
@@ -59,13 +64,18 @@ class SignUpFragment : Fragment() {
     private fun listenerSuccessEvent() {
         viewModel.isSuccessEvent.observe(viewLifecycleOwner) {
             if (it) {
-                DataStore(binding.inputFullName.text.toString().trim(),
-                    binding.inputEmail.text.toString().trim(),
-                    binding.inputPass.text.toString().trim())
+                var name = binding.inputFullName.text.toString().trim()
+                var username = binding.inputFullName.text.toString().trim()
+                var email = binding.inputEmail.text.toString().trim()
+                var phoneNo = binding.inputPhone.text.toString().trim()
+                var password = binding.inputPass.text.toString().trim()
+                DataStore(username, email, password)
                 Log.e("SignUpFragment:", " mk = ${binding.inputPass.text.toString().trim()}");
-//                var helperClass = UserHelperClass(binding.inputFullName.text.toString().trim(), "giang123vn1", binding.inputEmail.text.toString().trim(),"01234555",binding.inputPass.text.toString().trim())
-//                var fData = FireBase()
-//                fData.database.reference.child("giang123vn1").setValue(helperClass)
+                rootNode = FirebaseDatabase.getInstance()
+                reference = rootNode!!.getReference("users")
+                val helperClass = UserHelperClass(name, username, email, phoneNo, password)
+                reference!!.child(username).setValue(helperClass)
+
                 findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
 //                findNavController().popBackStack()
             }

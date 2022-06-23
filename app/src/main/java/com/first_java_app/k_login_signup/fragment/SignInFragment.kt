@@ -7,23 +7,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.first_java_app.k_login_signup.model.User
 import com.first_java_app.k_login_signup.*
+import com.first_java_app.k_login_signup.R
 import com.first_java_app.k_login_signup.databinding.FragmentSignInBinding
+import com.first_java_app.k_login_signup.model.User
 import com.first_java_app.k_login_signup.viewmodel.UserLoginViewModel
+import com.google.firebase.database.*
 import org.opencv.android.OpenCVLoader
 
 class SignInFragment : Fragment() {
     private lateinit var sharePreferences : SharedPreferences
     private lateinit var binding : FragmentSignInBinding
     private lateinit var viewModel: UserLoginViewModel
-
+    var rootNode: FirebaseDatabase? = null
+    var reference: DatabaseReference? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,15 +48,9 @@ class SignInFragment : Fragment() {
             viewModel.user = userPreferences
         binding.apply {
             loginBtn.setOnClickListener {
-//                viewModel.checkEmailAndPassword(
-//                    inputEmail.text.toString().trim(),
-//                    inputPass.text.toString().trim()
-//                )
-                val intent = Intent(activity, MainMenu::class.java)
-                startActivity(intent)
+                isUser()
             }
-            listenerSuccessEvent()
-            listenerErrorEvent()
+
         }
         binding.gotoSignup.setOnClickListener {
             val controller = findNavController()
@@ -66,38 +61,39 @@ class SignInFragment : Fragment() {
         }else{
             println("giang-opencv failed!")
         }
-//        val setdata = FireBase()
-//        setdata.setFData("message1","blablabla")
-//        println("giangne"+setdata.getFData("message"))
     }
 
-    private fun listenerSuccessEvent() {
-        viewModel.isSuccessEvent.observe(viewLifecycleOwner) {
-            if (it) {
-                var fullName = viewModel.user.fullName
-                val editor : SharedPreferences.Editor = sharePreferences.edit()
-                editor.putString("NAME",fullName)
-                editor.putString("EMAIL",binding.inputEmail.text.toString().trim())
-                editor.putString("PASSWORD",binding.inputPass.text.toString().trim())
-                editor.putBoolean("CHECK",true)
-                editor.apply()
-//                val controller = findNavController()
-//                controller.navigate(R.id.action_signInFragment_to_homeFragment)
 
+    private fun isUser() {
+        val userEnteredUsername: String = binding.inputUser.text.toString().trim()
+        val userEnteredPassword: String = binding.inputPass.text.toString().trim()
 
-
-
-
+        val reference = FirebaseDatabase.getInstance().getReference("users")
+        val checkUser = reference.orderByChild("username").equalTo(userEnteredUsername)
+        checkUser.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    binding.inputUser.setError(null)
+                    val passwordFromDB =
+                        dataSnapshot.child(userEnteredUsername).child("password").getValue(
+                            String::class.java
+                        )
+                    // tro toi urename va tim password
+                    if (passwordFromDB == userEnteredPassword) {
+                        binding.inputUser.setError(null)
+                        MainActivity.user_username_gadget = binding.inputUser.text.toString().trim()
+                        val intent = Intent(activity, MainMenu::class.java)
+                        startActivity(intent)
+                    } else {
+                        binding.inputPass.setError("Wrong Password")
+                        binding.inputUser.requestFocus()
+                    }
+                } else {
+                    binding.inputUser.setError("No such user exit")
+                    binding.inputUser.requestFocus()
+                }
             }
-        }
-    }
-
-    private fun listenerErrorEvent() {
-        viewModel.isErrorEvent.observe(viewLifecycleOwner) { errMess ->
-            val dialog = AlertDialog.Builder(requireContext())
-            dialog.setTitle("Error")
-            dialog.setMessage(errMess)
-            dialog.show()
-        }
+            override fun onCancelled(error: DatabaseError) {}
+        })
     }
 }

@@ -3,63 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activity.LoginActivity"
+        android:orientation="vertical"
         android:background="@color/grayWhite">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_smallorangecir"
-            android:layout_alignParentLeft="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_lightsemi" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_orangecir" />
+            android:id="@+id/logo_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:transitionName="logo_image"
+            android:foregroundGravity="center"
+            android:src="@drawable/logo_login"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="30dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="10dp"
                 android:text="Log in"
+                android:textColor="@color/btn_bg_1"
                 android:textSize="40dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="E-mail" />
+                android:text="Username" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your email or phone">
+                android:hint="Your user name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputEmail"
+                    android:id="@+id/inputUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
@@ -92,7 +81,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="Forgot your password?"
-                android:textColor="@color/orange" />
+                android:textColor="@color/btn_bg_1" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/loginBtn"
@@ -102,7 +91,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/btn_bg_1"
                 android:ems="10"
                 android:text="Login" />
 
@@ -133,7 +122,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:text="Sign up"
-                    android:textColor="@color/orange" />
+                    android:textColor="@color/btn_bg_1" />
             </LinearLayout>
 
             <LinearLayout
@@ -212,5 +201,5 @@
 
             </LinearLayout>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </layout>

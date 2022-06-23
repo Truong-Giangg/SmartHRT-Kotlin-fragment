@@ -31,10 +31,14 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply{
-//            btnSignUp.setOnClickListener {
-//                val controller = findNavController()
-//                controller.navigate(R.id.action_welcomeFragment_to_signUpFragment)
-//            }
+            welcomeSkip.setOnClickListener {
+                val controller = findNavController()
+                controller.navigate(R.id.action_welcomeFragment_to_signInFragment)
+            }
+            startlogin.setOnClickListener {
+                val controller = findNavController()
+                controller.navigate(R.id.action_welcomeFragment_to_signInFragment)
+            }
             gotoLogin.setOnClickListener {
                 val controller = findNavController()
                 controller.navigate(R.id.action_welcomeFragment_to_signInFragment)

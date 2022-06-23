@@ -1,72 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ECE4E4">
-
+        android:orientation="vertical"
+        android:background="@color/grayWhite"
+        >
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/logo_login"
+             />
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_smallorangecir"
-            android:layout_alignParentLeft="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_lightsemi" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_orangecir" />
-
-
-        <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="30dp"
             android:orientation="vertical">
-
-
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/logo_name"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="Sign up"
-                android:textSize="40dp" />
-
+                android:transitionName="logo_text"
+                android:text="Smart HRT"
+                android:textColor="@color/btn_bg_1"
+                android:textSize="30sp"
+                />
+<!--            <TextView-->
+<!--                android:id="@+id/logo_signin"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Sign Up To Continue"-->
+<!--                android:textSize="15sp"-->
+<!--                android:transitionName="logo_desc"/>-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="FullName" />
+                android:layout_marginTop="20dp"
+                android:text="UserName" />
 
             <com.google.android.material.textfield.TextInputLayout
-
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name">
-
+                android:hint="User Name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,6 +94,26 @@
                     android:layout_height="wrap_content"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Phone No" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:hint="Your phone no">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -115,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/btn_bg_1"
                 android:layout_gravity="center"
                 android:text="Sign up"
                 android:background="@drawable/rounded_button"
@@ -147,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Login"
-                    android:textColor="@color/orange" />
+                    android:textColor="@color/btn_bg_1" />
             </LinearLayout>
 
             <LinearLayout
@@ -226,5 +233,5 @@
 
             </LinearLayout>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </layout>
