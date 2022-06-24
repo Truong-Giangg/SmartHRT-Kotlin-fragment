@@ -17,6 +17,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.webkit.WebSettings
 import android.widget.Button
+import android.widget.Toast
 import java.util.ArrayList
 
 //https://how2electronics.com/how-to-send-esp32-cam-captured-image-to-google-drive/
@@ -41,7 +42,9 @@ class ipCamere : AppCompatActivity() {
         start.setOnClickListener(View.OnClickListener {
             val ipCamPath = URL.getText().toString()
             updateIPlist(ipCamPath)
-            val imgHtml = "<img src=\"http://$ipCamPath/\">\n"
+//            val imgHtml = "<img src=\"http://$ipCamPath/\">\n"
+            val imgHtml = "<img src=$ipCamPath>"
+            println("giangurl"+imgHtml)
             html = """<!DOCTYPE html>
 <html>
 <head>
