@@ -58,19 +58,30 @@
         <entry key="..\:/Users/phamv/AndroidStudioProjects/K_Login_Signup/app/src/main/res/layout/profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable-v24/border_background.xml" value="0.2505" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable-v24/btn_bg.xml" value="0.2505" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/addiconcustom.xml" value="0.1685" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/drawable_button_sign_up.xml" value="0.1955" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/drawable_radius_sign_up.xml" value="0.1955" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/ic_nextbutoon.xml" value="0.179" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/rmiconcustom.xml" value="0.1685" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/rounded_button.xml" value="0.179" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/slidericoncustom.xml" value="0.1955" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/swiconcustom.xml" value="0.1955" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/drawable/tempiconcustom.xml" value="0.1955" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_addwidget.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_alarm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_chooseBtn.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_choose_btn.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_gesturelist.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_ip_camere.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main_gesture.xml" value="0.1" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main_gesture.xml" value="0.25" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_pickalarm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_removewidget.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_show_gesture_picked.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_verificationcode.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/activity_welcome.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_menu.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_onboarding.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_onboarding1.xml" value="0.22826086956521738" />
@@ -80,7 +91,12 @@
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_sign_up.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_splash.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/fragment_welcome.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/item_clicked.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/item_menu_list_restaurant_adapter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/layout_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/logout_icon.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/layout/profile_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/phamv/AndroidStudioProjects/SmartHRT-Kotlin-fragment/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25416666666666665" />
       </map>
     </option>

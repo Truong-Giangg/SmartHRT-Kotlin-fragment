@@ -18,17 +18,22 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:outlineAmbientShadowColor="@color/black"
+            android:background="@drawable/drawable_radius_sign_up"
             />
     </LinearLayout>
-    <Button
+
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="150dip"
-        android:ems="10"/>
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/btn_bg_1"
+        android:ems="10"
+        android:text="Start" />
 
     <AutoCompleteTextView
         android:id="@+id/url"

@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".handdetect.CameraActivity"
      >
+
     <org.opencv.android.JavaCameraView
+        android:id="@+id/frame_Surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_Surface"
         app:show_fps="true" />
     <LinearLayout
         android:layout_width="wrap_content"
@@ -39,6 +40,8 @@
             android:onClick="backHome"
             android:layout_weight="1"
             android:text="quay lại"
+            android:backgroundTint="@color/btn_bg_1"
+            android:textColor="@color/black"
             android:textAllCaps="false"
             android:padding="0dp"
             android:layout_marginTop="20dp"
@@ -50,6 +53,8 @@
             android:layout_height="wrap_content"
             android:onClick="goAddGesture"
             android:layout_weight="1"
+            android:backgroundTint="@color/btn_bg_1"
+            android:textColor="@color/black"
             android:text="thêm"
             android:textAllCaps="false"
             android:layout_marginTop="20dp"
@@ -61,6 +66,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:onClick="goSwitchGesture"
+            android:backgroundTint="@color/btn_bg_1"
+            android:textColor="@color/black"
             android:text="kiểm tra"
             android:textAllCaps="false"
             android:layout_weight="1"/>
